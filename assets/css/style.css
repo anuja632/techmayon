@@ -5118,6 +5118,14 @@ button {
   font-size: clamp(35px, 3.15vw, 60px);
   color: var(--ul-primary);
 }
+.ul-inner-service-icon img {
+      width: 65px;       /* Small icon size */
+    height: 65px;      /* Perfect square */
+    object-fit: contain;
+    display: block;
+
+
+}
 .ul-inner-service-title {
   font-size: clamp(18px, 1.16vw, 22px);
   font-weight: 700;
@@ -5524,9 +5532,11 @@ button {
   position: relative;
 }
 .ul-team-member-img img {
-  aspect-ratio: 270/312;
+  /* aspect-ratio: 270/312; */
+  height:250px;
+  padding: 10px;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .ul-team-member-socials {
   position: absolute;
@@ -5606,6 +5616,7 @@ button {
   font-size: clamp(13px, 0.84vw, 16px);
   line-height: 1.6;
   color: var(--ul-gray);
+  text-align: justify;
   margin-bottom: clamp(15px, 1.58vw, 30px);
 }
 .ul-team-details-infos {

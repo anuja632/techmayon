@@ -17,6 +17,29 @@ scrollBtn.addEventListener("click", (e) => {
         behavior: "smooth"
     });
 });
+    var swiper = new Swiper('.team-slider', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    nav:false,
+    autoplay: {
+        delay: 1800,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    // },
+    breakpoints: {
+        0: { slidesPerView: 1 },
+        576: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+        1200: { slidesPerView: 4 }
+    }
+});
 
     const form = document.getElementById('contactForm');
 
@@ -63,3 +86,4 @@ scrollBtn.addEventListener("click", (e) => {
             console.error(error);
         });
     });
+
