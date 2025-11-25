@@ -87,3 +87,7 @@ scrollBtn.addEventListener("click", (e) => {
         });
     });
 
+
+    const cards = document.querySelectorAll(".card");
+
+

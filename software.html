@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Stacked Mockup Cards + Lightbox</title>
+
+<style>
+  :root{
+    --bg:#f6f7f9;
+    --card-w:300px;
+    --card-h:420px;
+    --gap:64px;
+  }
+
+  html,body{
+    height:100%;
+    margin:0;
+    font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg,#fbfcfd 0%, var(--bg) 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .stage{
+    width:min(1100px,95%);
+    display:flex;
+    justify-content:space-between;
+    gap:var(--gap);
+    align-items:center;
+  }
+
+  /* STACK */
+  .stack{
+    width:var(--card-w);
+    height:var(--card-h);
+    position:relative;
+    perspective:1200px;
+  }
+
+  .card{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0; top:0;
+    border-radius:18px;
+    overflow:hidden;
+    background:#fff;
+    transform-origin:center;
+    transition:transform .4s,box-shadow .3s;
+    cursor:pointer;
+  }
+
+  .card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    user-select:none;
+    pointer-events:none;
+  }
+
+  /* LEFT STACK positions */
+  .stack.is-left .card--top  {transform: translate(0,0) rotate(-2deg);}
+  .stack.is-left .card--mid  {transform: translate(-18px,14px) rotate(-6deg) scale(.96);}
+  .stack.is-left .card--back {transform: translate(-36px,28px) rotate(-10deg) scale(.92);}
+
+  /* RIGHT STACK positions */
+  .stack.is-right .card--top  {transform: translate(0,0) rotate(2deg);}
+  .stack.is-right .card--mid  {transform: translate(18px,14px) rotate(6deg) scale(.96);}
+  .stack.is-right .card--back {transform: translate(36px,28px) rotate(10deg) scale(.92);}
+
+  /* Hover */
+  .stack:hover .card--top{
+    transform: translate(0,-12px) scale(1.02) rotate(0deg);
+    box-shadow:0 30px 70px rgba(10,20,30,0.18);
+  }
+
+  /* ---------- LIGHTBOX ---------- */
+  .lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .35s ease;
+    z-index:9999;
+  }
+
+  .lightbox.active{
+    opacity:1;
+    pointer-events:auto;
+  }
+
+  .lightbox img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:12px;
+    box-shadow:0 0 40px rgba(0,0,0,.4);
+  }
+
+  .lightbox-close{
+    position:absolute;
+    top:30px;
+    right:40px;
+    font-size:42px;
+    color:white;
+    cursor:pointer;
+    font-weight:300;
+    user-select:none;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="stage">
+
+  <!-- LEFT STACK -->
+  <div class="stack is-left">
+    <div class="card card--back">
+      <img src="/mnt/data/Screenshot 2025-11-25 153329.png">
+    </div>
+    <div class="card card--mid">
+      <img src="/mnt/data/Screenshot 2025-11-25 153329.png">
+    </div>
+    <div class="card card--top">
+      <img src="/mnt/data/Screenshot 2025-11-25 153329.png">
+    </div>
+  </div>
+
+  <!-- RIGHT STACK -->
+  <div class="stack is-right">
+    <div class="card card--back">
+      <img src="/mnt/data/Screenshot 2025-11-25 153329.png">
+    </div>
+    <div class="card card--mid">
+      <img src="/mnt/data/Screenshot 2025-11-25 153329.png">
+    </div>
+    <div class="card card--top">
+      <img src="/mnt/data/Screenshot 2025-11-25 153329.png">
+    </div>
+  </div>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="">
+</div>
+
+
+<script>
+/* ------------------ LIGHTBOX LOGIC ------------------ */
+const lightbox = document.getElementById("lightbox");
+const lightImg  = document.getElementById("lightbox-img");
+const closeBtn  = document.querySelector(".lightbox-close");
+
+// open
+document.querySelectorAll(".card img").forEach(img => {
+  img.addEventListener("click", () => {
+    lightImg.src = img.src;
+    lightbox.classList.add("active");
+  });
+});
+
+// close on button
+closeBtn.addEventListener("click", () => {
+  lightbox.classList.remove("active");
+});
+
+// close clicking outside image
+lightbox.addEventListener("click", e => {
+  if(e.target === lightbox){
+    lightbox.classList.remove("active");
+  }
+});
+
+// close ESC key
+document.addEventListener("keydown", e => {
+  if(e.key === "Escape"){
+    lightbox.classList.remove("active");
+  }
+});
+</script>
+
+</body>
+</html>

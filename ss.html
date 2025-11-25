@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Industries We Serve</title>
+<style>
+
+
+  /* left column content */
+  .content {
+    padding-right:10px;
+  }
+
+  h2 {
+    font-size:28px;
+    margin:0 0 8px 0;
+    letter-spacing: -0.2px;
+  }
+
+  p.lead {
+    margin:8px 0 26px 0;
+    color:#444;
+  }
+
+  /* grid of items */
+  .grid {
+    display:grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap:var(--gap);
+  }
+
+  .item {
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    background:transparent;
+    padding-left:6px;
+    position:relative;
+    min-height:70px;
+  }
+
+  /* left rounded bracket */
+  .item::before{
+    content:"";
+    width:14px;
+    border-left:6px solid var(--accent);
+    border-radius:20px;
+    height:64px;
+    display:block;
+    margin-right:8px;
+    box-shadow: 0 3px 0 rgba(0,0,0,0.03);
+    transform: translateY(0);
+  }
+
+  /* check icon */
+  .check {
+    width:28px;
+    height:28px;
+    min-width:28px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:6px;
+  }
+
+  .check svg {
+    width:22px;
+    height:22px;
+    display:block;
+  }
+
+  .text {
+    line-height:1.35;
+    font-size:15px;
+    color:#0f0f0f;
+    text-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  }
+
+  .text .title {
+    font-weight:600;
+    display:block;
+    margin-bottom:6px;
+  }
+
+  .text .desc {
+    font-weight:400;
+    color:#555;
+    font-size:14px;
+  }
+
+  /* highlight the first item like in screenshot */
+  .item.featured {
+    background:var(--card);
+    border-radius:18px;
+    padding:18px 22px 18px 20px;
+  }
+  .item.featured::before{ height:64px; margin-left:-6px; } /* keep bracket visible */
+
+
+
+  /* responsive */
+  @media (max-width: 980px){
+    .industries-section{ grid-template-columns: 1fr; }
+    .grid{ grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <section class="industries-section" aria-labelledby="industries-title">
+    <div class="content">
+      <h2 id="industries-title">Industries We Serve</h2>
+      <p class="lead">We have experience designing and developing websites for:</p>
+  
+      <div class="grid" id="industriesGrid">
+  
+        <!-- Featured / highlighted item -->
+        <div class="item featured">
+          <div class="check" aria-hidden="true">
+            <!-- check SVG -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <div class="text">
+            <span class="title">Startups &amp; SMEs</span>
+            <span class="desc">Building lean, agile web presence.</span>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <div class="text">
+            <span class="title">E-Commerce Brands</span>
+            <span class="desc">Creating powerful storefronts.</span>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <div class="text">
+            <span class="title">Enterprise &amp; B2B</span>
+            <span class="desc">Building robust, scalable web applications.</span>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <div class="text">
+            <span class="title">Professional Services</span>
+            <span class="desc">Corporate websites that reflect your credibility.</span>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <div class="text">
+            <span class="title">Technology &amp; SaaS</span>
+            <span class="desc">Web apps and product sites that convert.</span>
+          </div>
+        </div>
+  
+        <!-- NEW: added industry -->
+        <div class="item">
+          <div class="check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <div class="text">
+            <span class="title">Healthcare &amp; Pharma</span>
+            <span class="desc">Secure patient portals and regulatory-compliant sites.</span>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  
+  </section>
+</div>
+
+
+</body>
+</html>
