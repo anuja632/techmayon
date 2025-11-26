@@ -90,39 +90,83 @@
 
 
 
-    <section class="tm-webdesign-section mt-5">
-                <div class="ul-section-heading text-center justify-content-center">
+
+
+        
+<section class="clientzone-wrapper">
+   <div class="ul-section-heading text-center justify-content-center">
             <div class="left">
-                <span class="ul-section-sub-title">Software Development</span>
+                <span class="ul-section-sub-title">WHAT WE DO</span>
                 <h2 class="ul-section-title">
-Custom Software Solutions to Accelerate Your Business</h2>
+    Expert Digital Services Designed to Elevate Your Business</h2>
             </div>
         </div>
-    <div class="tm-webdesign-container">
-        
-        <!-- Left Content -->
-        <div class="tm-webdesign-content">
-    
-            <p class="ul-inner-service-descr">
-At TechMayon, we specialize in crafting scalable, high-performance software tailored to your unique business needs. Whether you’re launching a new product, automating operations, or delivering enterprise-grade applications, our expert team turns your vision into powerful digital solutions.
-</p>
-<p class="ul-inner-service-descr">
 
+<div class="clientzone-row" id="clientzoneRow">
 
-Every website we build is crafted to be scalable, secure, and optimized for long-term success—ensuring your digital presence grows stronger as your business evolves.
-            </p>
-        </div>
-
-        <!-- Right Image -->
-        <div class="tm-webdesign-image">
-            <img src="https://img.freepik.com/premium-photo/smiling-graphic-designers-interacting-with-each-other-while-working-desk_107420-61232.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Web Design Image">
-        </div>
-
+  <div class="clientzone-step">
+    <div class="clientzone-front">
+      <div class="clientzone-num">01</div>
+      <h4 class="ul-inner-service-title">Startups & Innovators</h4>
     </div>
+    <div class="clientzone-back">
+      <div class="clientzone-num">01</div>
+      <h3 class="ul-inner-service-title">Startups & Innovators</h3>
+      <p >We simplify complex product ideas into clear explanations that help users quickly understand your concept.</p>
+    </div>
+  </div>
+
+  <div class="clientzone-step">
+    <div class="clientzone-front">
+      <div class="clientzone-num">02</div>
+      <h4 class="ul-inner-service-title">Corporate & Brands</h4>
+    </div>
+    <div class="clientzone-back">
+      <div class="clientzone-num">02</div>
+      <h3 class="ul-inner-service-title">Corporate & Brands</h3>
+      <p>We produce professional visuals that communicate processes and offerings clearly for clients and teams.</p>
+    </div>
+  </div>
+
+  <div class="clientzone-step">
+    <div class="clientzone-front">
+      <div class="clientzone-num">03</div>
+      <h4 class="ul-inner-service-title">Education & Learning</h4>
+    </div>
+    <div class="clientzone-back">
+      <div class="clientzone-num">03</div>
+      <h3 class="ul-inner-service-title">Education & Learning</h3>
+      <p>We create simplified learning visuals that support understanding, training, and user engagement.</p>
+    </div>
+  </div>
+
+  <div class="clientzone-step">
+    <div class="clientzone-front">
+      <div class="clientzone-num">04</div>
+      <h4 class="ul-inner-service-title">E-commerce & Retail</h4>
+    </div>
+    <div class="clientzone-back">
+      <div class="clientzone-num">04</div>
+      <h3 class="ul-inner-service-title">E-commerce & Retail</h3>
+      <p>We highlight product value and features so customers can make confident, quick purchase decisions.</p>
+    </div>
+  </div>
+
+  <div class="clientzone-step">
+    <div class="clientzone-front">
+      <div class="clientzone-num">05</div>
+      <h4 class="ul-inner-service-title">Services & Solutions</h4>
+    </div>
+    <div class="clientzone-back">
+      <div class="clientzone-num">05</div>
+      <h3 class="ul-inner-service-title">Services & Solutions</h3>
+      <p>We break down your services into clear, structured explanations that build trust and understanding.</p>
+    </div>
+  </div>
+
+</div>
+
 </section>
-
-
-
 
 </main>
 
@@ -272,6 +316,25 @@ We help businesses grow through technology, strategy, and innovation.
     <script src="assets/vendor/scrollspy/simple-scrollspy.min.js"></script>
 
 <script>
+      const row = document.getElementById('clientzoneRow');
+  row.addEventListener('mouseenter', () => row.classList.add('hovering'));
+  row.addEventListener('mouseleave', () => row.classList.remove('hovering'));
+
+  const steps = document.querySelectorAll('.clientzone-step');
+  if (steps.length) {
+    const mid = Math.floor(steps.length/2);
+    steps[mid].classList.add('clientzone-active');
+    steps.forEach(s=>{
+      s.addEventListener('mouseenter', ()=> {
+        steps.forEach(x=> x.classList.remove('clientzone-active'));
+      });
+    });
+    row.addEventListener('mouseleave', ()=> {
+      steps.forEach(x=> x.classList.remove('clientzone-active'));
+      steps[mid].classList.add('clientzone-active');
+    });
+  }
+
 const lightbox = document.getElementById("lightbox");
 const lightImg  = document.getElementById("lightbox-img");
 const closeBtn  = document.querySelector(".lightbox-close");
@@ -330,6 +393,8 @@ document.addEventListener("keydown", e => {
 
 </script>
 
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <!-- custom JS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
