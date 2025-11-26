@@ -7337,7 +7337,7 @@ flex-direction: column;  }
 
   .clientzone-step{
     flex:1 1 0;
-    padding:56px 22px;
+    padding:25px;
     background:#f7f9fc;
     border-right:1px solid #e9eef8;
     position:relative;
@@ -7385,7 +7385,7 @@ flex-direction: column;  }
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    padding:16px 36px;
+    padding:18px;
     opacity:0;
     pointer-events:none;
     transition:opacity .28s ease, transform .28s ease;
@@ -7399,7 +7399,7 @@ flex-direction: column;  }
   }
 
   .clientzone-back h3 { margin:8px 0 12px; font-size:22px; }
-  .clientzone-back p { margin:0; color:var(--muted); line-height:1.6; font-size:14px; }
+  .clientzone-back p { margin:0; color:var(--muted); line-height:1.6; font-size:15px;}
 
   .clientzone-step:hover { background:#fff; }
   .clientzone-step:hover .clientzone-front { opacity:0; }
@@ -7537,3 +7537,181 @@ flex-direction: column;  }
     height: 90px;
     background: #d5d5d5;
 }
+
+
+:root {
+  --accent: #43006d;
+}
+
+.who-we-help-modern {
+  padding: 80px 20px;
+  background: #faf7ff;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+.circle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.circle-item {
+  text-align: center;
+  transition: transform .3s ease;
+}
+
+.circle-item:hover {
+  transform: translateY(-8px);
+}
+
+.circle-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px dashed var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  color: var(--accent);
+  margin: 0 auto 15px;
+  transition: background .3s ease, color .3s ease;
+}
+
+.circle-item:hover .circle-icon {
+  background: var(--accent);
+  color: #fff;
+}
+
+.circle-item h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .circle-icon {
+    width: 90px;
+    height: 90px;
+    font-size: 30px;
+  }
+  .ul-section-title {
+    font-size: 26px;
+  }
+}
+
+
+
+.our-services {
+  padding: 64px 20px;
+  background: var(--bg);
+  color: #111;
+}
+
+
+
+/* Grid */
+.service-grid{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:24px;
+}
+
+/* Service Item */
+.service-item{
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+  border-radius:14px;
+  padding:22px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.04);
+  transition: transform .22s ease, box-shadow .22s ease;
+  border: 1px solid rgba(16,24,40,0.03);
+}
+
+/* Diagonal hover shapes */
+.service-item::before,
+.service-item::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: rgba(67,0,109,0.08);
+  transform: rotate(45deg) translate(-100%, -100%);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+.service-item::after {
+  background: rgba(67,0,109,0.04);
+  transform: rotate(-45deg) translate(100%, 100%);
+}
+
+.service-item:hover::before {
+  transform: rotate(45deg) translate(0, 0);
+  opacity: 1;
+}
+
+.service-item:hover::after {
+  transform: rotate(-45deg) translate(0, 0);
+  opacity: 1;
+}
+
+.service-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(16,24,40,0.08);
+}
+
+/* icon */
+.service-icon{
+  width:64px;
+  height:64px;
+  margin:0 auto 12px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg, rgba(67,0,109,0.06), rgba(67,0,109,0.02));
+  color:var(--accent);
+  font-size:22px;
+  box-shadow: inset 0 -6px 18px rgba(67,0,109,0.03);
+}
+
+/* text */
+.service-item h3{
+  margin:0 0 6px;
+  font-size:18px;
+  text-align:center;
+  color:#0f1724;
+}
+
+.service-item p{
+  margin:0;
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.5;
+  text-align:center;
+}
+
+/* responsive */
+@media (max-width: 992px){
+  .service-grid{ grid-template-columns: repeat(2, 1fr); }
+  .section-title{ font-size:26px; }
+}
+
+@media (max-width: 600px){
+  .service-grid{ grid-template-columns: 1fr; gap:16px; }
+  .service-item{ padding:16px; }
+  .service-icon{ width:52px; height:52px; font-size:18px; border-radius:10px;}
+}
+
+
