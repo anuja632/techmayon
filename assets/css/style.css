@@ -2323,17 +2323,17 @@ button {
   position: relative;
 }
 .ul-about-3-tab {
-  width: 100%;
-  text-align: center;
-  position: absolute;
   position: sticky;
   top: 120px;
-  width: max-content;
-  margin: auto;
+  /* width: max-content; */
   max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 10;
 }
+
 .ul-about-3-tab-header {
-  background-color: #FFA319;
+  background-color: #43006d;
   height: clamp(22px, 1.47vw, 28px);
   height: clamp(53px, 2.94vw, 56px);
   border-radius: 30px 30px 0 0;
@@ -2431,11 +2431,9 @@ button {
   animation: ul_ab3_slide_right 0.5s ease-in-out forwards;
 }
 .ul-about-3-tab:nth-child(2) .ul-about-3-tab-header {
-  background-color: #3996FF;
+  background-color: #43006d;
 }
-.ul-about-3-tab:nth-child(3) .ul-about-3-tab-header {
-  background-color: #6B00BD;
-}
+
 .ul-about-3-tab:last-child.reached .left-pill {
   animation: ul_ab3_slide_left 0.5s ease-in-out forwards;
 }
@@ -4786,7 +4784,7 @@ button {
 }
 
 .ul-solutions {
-  background: linear-gradient(90deg, #43006d 0%, #2AD3F8 100%);
+  background: linear-gradient(90deg, #ff4d02 0%, #43006d 100%);
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -7714,4 +7712,352 @@ flex-direction: column;  }
   .service-icon{ width:52px; height:52px; font-size:18px; border-radius:10px;}
 }
 
+.ul-about-3-bg {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border-radius: 16px; */
+    position: relative;
 
+    padding: 14%;
+    /* margin-bottom: 25px; */
+}
+
+.ul-about-3-front-content {
+    color: #fff;
+    backdrop-filter: blur(6px);
+    background: rgba(0,0,0,0.35);
+    padding: 20px;
+    border-radius: 10px;
+    /* max-width: 60%; */
+}
+
+
+
+
+/* ===============================
+   WHY EXPO SECTION STYLES
+   =============================== */
+
+.whyexpo-section {
+  position: relative;
+  background-image: url("https://digitics.temptics.com/assets/img/about-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Parallax-style effect on desktop */
+  padding: 80px 0;
+  min-height: 85vh;
+  color: #222;
+  z-index: 1;
+}
+
+/* Gradient overlay improves readability */
+/* .whyexpo-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 245, 235, 0.95) 0%,
+    rgba(255, 240, 230, 0.8) 40%,
+    rgba(255, 230, 210, 0.5) 80%,
+    rgba(255, 230, 210, 0.3) 100%
+  );
+  backdrop-filter: brightness(0.95);
+  z-index: 0;
+} */
+ .whyexpo-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 245, 235, 0.95) 0%,
+    rgba(255, 240, 230, 0.8) 40%,
+    rgba(255, 230, 210, 0.5) 80%,
+    rgba(255, 230, 210, 0.3) 100%
+  );
+  backdrop-filter: brightness(0.95);
+  z-index: 1;
+}
+
+ /* Gradient overlay improves readability */
+/* .whyexpo-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75) 0%,   
+    rgba(0, 0, 0, 0.55) 40%,  
+    rgba(0, 0, 0, 0.3) 70%,  
+    rgba(0, 0, 0, 0.1) 100%   
+  );
+  backdrop-filter: brightness(1); 
+  z-index: 0;
+} */
+
+
+/* Keep content centered within full-width background */
+.whyexpo-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Title */
+.whyexpo-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #43006d;
+}
+
+/* Filter Buttons */
+.whyexpo-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.whyexpo-filters button {
+  padding: 10px 32px;
+  border: none;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  background: #f6f6f6;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.whyexpo-filters button:hover {
+  background: #ddd;
+}
+
+.whyexpo-filters .active {
+  background: #43006d;
+  color: #fff;
+}
+.whyexpo-section .ul-section-heading {
+    position: relative;
+    z-index: 2; /* above overlay */
+    /* background: rgba(255, 255, 255, 0.85); translucent white */
+    /* display: inline-block; */
+    /* padding: 15px 30px; */
+    border-radius: 10px;
+    color: #222; /* dark text for contrast */
+}
+
+
+/* Content Area */
+.whyexpo-container {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 5rem;
+  transition: opacity 0.8s ease-in-out;
+  opacity: 1;
+}
+
+.whyexpo-container.fade-out {
+  opacity: 0;
+}
+
+@media (min-width: 992px) {
+  .whyexpo-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+}
+
+/* Text Side */
+.whyexpo-text {
+  flex: 1;
+  position: relative;
+}
+
+.whyexpo-number {
+  font-size: 100px;
+  font-weight: 700;
+  color:rgb(67, 0, 109, 0.6); /* soft berry tint instead of flat gray */
+  line-height: 0.8;
+  user-select: none;
+}
+
+.whyexpo-content {
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
+
+.whyexpo-line {
+  width: 60px;
+  height: 3px;
+  background: #43006d;
+  margin-bottom: 12px;
+}
+
+.whyexpo-content h3 {
+  color: #43006d;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+/* Improved readability for paragraph text */
+.whyexpo-content p {
+  max-width: 580px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #222;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.85); /* translucent white card */
+  padding: 16px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+/* Image Side */
+.whyexpo-image {
+  flex: 1;
+  position: relative;
+  max-width: 600px;
+
+  margin: 0 auto;
+}
+.whyexpo-image img {
+  height:350px;
+  object-fit: cover;
+}
+
+.whyexpo-bg {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  background: linear-gradient(to right, #43006d, #b12028);
+  z-index: 1;
+  border-radius: 12px;
+  opacity: 0.9;
+}
+
+
+
+.whyexpo-frame::before,
+.whyexpo-frame::after {
+  content: "";
+  position: absolute;
+  background: white;
+}
+
+.whyexpo-frame::before {
+  top: 12px;
+  right: 8px;
+  width: 10px;
+  bottom: -5px;
+}
+
+.whyexpo-frame::after {
+  right: 8px;
+  left: 0;
+  height: 10px;
+  bottom: -5px;
+}
+
+.whyexpo-frame img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  opacity: 0.95;
+  border-radius: 12px;
+  transition: transform 2s ease-in-out;
+}
+
+.whyexpo-frame img:hover {
+  transform: scale(1.05);
+}
+
+/* ===============================
+   RESPONSIVE STYLES
+   =============================== */
+
+/* Disable parallax on tablets and below */
+@media (max-width: 992px) {
+  .whyexpo-section {
+    background-attachment: scroll;
+  }
+
+  /* Stack content vertically on medium screens */
+  .whyexpo-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .whyexpo-text,
+  .whyexpo-image {
+    max-width: 100%;
+  }
+
+  .whyexpo-content {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .about-section .shape-1 {
+    display: none;
+  }
+
+  .whyexpo-title {
+    font-size: 2rem;
+  }
+
+  .whyexpo-number {
+    font-size: 150px;
+  }
+
+  .whyexpo-container {
+    display: block; /* ensures full-width stacking */
+  }
+
+  .whyexpo-text,
+  .whyexpo-image {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .whyexpo-bg {
+    height: 350px;
+  }
+
+  .whyexpo-frame img {
+    height: 300px;
+  }
+
+  .whyexpo-content p {
+    background: rgba(255, 255, 255, 0.95); /* stronger for smaller screens */
+  }
+}
