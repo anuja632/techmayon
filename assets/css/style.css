@@ -8158,7 +8158,7 @@ flex-direction: column;  }
 
 .am-step-icon {
   font-size: 32px;
-  color: #4e73df;
+   color: #ff4d02;
   margin-bottom: 15px;
 }
 
@@ -8176,27 +8176,9 @@ flex-direction: column;  }
 /* Arrow Styling */
 .am-step-arrow i {
   font-size: 28px;
-  color: #4e73df;
+  color: #ff4d02;
 }
 
-
-.am-step-arrow {
-  width: 60px;
-  height: 2px;
-  background: #4e73df;
-  position: relative;
-}
-
-.am-step-arrow::after {
-  content: "\f105"; /* Font Awesome arrow-right */
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  position: absolute;
-  right: -12px;
-  top: -10px;
-  font-size: 20px;
-  color: #4e73df;
-}
 
 /* Responsive: stack steps in 2 columns and hide arrows */
 @media (max-width: 768px) {
