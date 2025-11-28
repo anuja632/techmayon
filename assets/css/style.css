@@ -8061,3 +8061,157 @@ flex-direction: column;  }
     background: rgba(255, 255, 255, 0.95); /* stronger for smaller screens */
   }
 }
+
+
+
+/* -------------- SWIPER MAIN ---------------- */
+.app-swiper-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: auto;
+}
+
+/* -------------- SLIDE CARD ---------------- */
+.app-slide {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  height: 280px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Black Overlay */
+.app-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+/* Content INSIDE card */
+.app-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.app-card-content i {
+  font-size: 38px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.app-card-content h3 {
+  font-size: 20px;
+  color: #fff;
+  margin: 0;
+}
+
+.app-card-content p {
+  font-size: 14px;
+  color: #eaeaea;
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
+/* -------------- ARROWS ---------------- */
+.app-next-btn,
+.app-prev-btn {
+  color: #43006d !important;
+  font-weight: bold;
+}
+
+/* Active pagination */
+.app-pagination .swiper-pagination-bullet-active {
+  background: #43006d !important;
+}
+
+
+.am-process-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.am-process-step {
+  background: #ffffff;
+  padding: 25px 20px;
+  width: 220px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.am-process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.am-step-icon {
+  font-size: 32px;
+  color: #4e73df;
+  margin-bottom: 15px;
+}
+
+.am-process-step h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.am-process-step p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Arrow Styling */
+.am-step-arrow i {
+  font-size: 28px;
+  color: #4e73df;
+}
+
+
+.am-step-arrow {
+  width: 60px;
+  height: 2px;
+  background: #4e73df;
+  position: relative;
+}
+
+.am-step-arrow::after {
+  content: "\f105"; /* Font Awesome arrow-right */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: -12px;
+  top: -10px;
+  font-size: 20px;
+  color: #4e73df;
+}
+
+/* Responsive: stack steps in 2 columns and hide arrows */
+@media (max-width: 768px) {
+  .am-process-steps {
+    gap: 20px;
+  }
+
+  .am-step-arrow {
+    display: none;
+  }
+
+  .am-process-step {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+

@@ -156,7 +156,32 @@ new Swiper('.ul-services-slider', {
     }
 });
 
+var swiper = new Swiper(".appSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 25,
+  loop: true,
 
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+
+  pagination: {
+    el: ".app-pagination",
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".app-next-btn",
+    prevEl: ".app-prev-btn",
+  },
+
+  breakpoints: {
+    1024: { slidesPerView: 3 },
+    768: { slidesPerView: 2 },
+    480: { slidesPerView: 1 },
+  }
+});
 
     // case study slider
     new Swiper(".ul-case-study-slider", {

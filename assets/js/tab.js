@@ -110,3 +110,21 @@ buttons.forEach(btn => {
 // init
 showWhyexpo(current);
 startWhyexpoAutoplay();
+
+
+
+          $(".industry-stats-carousel").owlCarousel({
+      loop: true,
+      margin: 30,
+      nav: false,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+      smartSpeed: 800,
+      responsive: {
+        0: { items: 1 },
+        768: { items: 2 },
+        1024: { items: 3 }
+      }
+    });
