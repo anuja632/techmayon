@@ -8257,7 +8257,7 @@ padding: 20px;
   font-size: 12px;
   font-weight: 400;
   padding-left: 16px;
-  color: var(--header);
+  color: #ff4d02;
 }
 .testimonial-wrapper-2 .testimonial-content .testimonial-card-items .client-info-items {
   display: flex;
@@ -8276,7 +8276,7 @@ padding: 20px;
 }
 .testimonial-wrapper-2 .testimonial-content .testimonial-card-items .client-info-items h5 {
   font-weight: 500;
-  color: var(--text);
+  color: black;
 }
 .testimonial-wrapper-2 .testimonial-content .testimonial-slider2 {
   margin-right: 40px;
@@ -8291,7 +8291,7 @@ padding: 20px;
   gap: 10px;
   position: absolute;
   top: 50%;
-  right: 0%;
+  right: -2%;
 }
 @media (max-width: 1199px) {
   .testimonial-wrapper-2 .array-button {
@@ -8307,18 +8307,18 @@ padding: 20px;
   transition: all 0.4s ease-in-out;
 }
 .testimonial-wrapper-2 .array-button .array-prev {
-  background-color: var(--theme);
+  background-color:#43006d;
   color: var(--white);
 }
 .testimonial-wrapper-2 .array-button .array-prev:hover {
-  background-color: var(--header);
+  background-color: #ff4d02;
 }
 .testimonial-wrapper-2 .array-button .array-next {
   background: rgba(2, 165, 206, 0.1);
 }
 .testimonial-wrapper-2 .array-button .array-next:hover {
   color: var(--white);
-  background-color: var(--header);
+  background-color: #ff4d02;
 }
 .testimonial-card-items .icon{
     font-size: 25px;
@@ -8326,13 +8326,14 @@ padding: 20px;
 } 
 .testimonial-card-items p{
     text-align: justify;
+  
     /* font-family: "jost"; */
     font-size: 18px;
 }
 .testimonial-card-items h4 {
     color:#00008b;
     font-size: 28px;
-    font-family: var(--volgarie_font);
+    /* font-family: var(--volgarie_font); */
 }
 
 
@@ -8418,4 +8419,54 @@ padding: 20px;
   .testimonial-wrapper-2 .client-info-items {
     justify-content: center;
   }
+}
+
+
+/* WHY CHOOSE TECHMAYON FOR SEO */
+.tm-why-seo {
+  padding: 60px 0;
+}
+
+.tm-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.tm-seo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 25px;
+}
+
+.tm-seo-item {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 6px 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.tm-seo-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 35px rgba(0,0,0,0.10);
+}
+
+.tm-seo-item i {
+  font-size: 40px;
+  color: #0072ff;
+  margin-bottom: 15px;
+}
+
+.tm-seo-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.tm-seo-item p {
+  font-size: 15px;
+  color: #555;
 }

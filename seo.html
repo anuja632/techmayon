@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="assets/vendor/splide/splide.min.css">
     <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/vendor/animate-wow/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
 
     <link rel="icon" type="image/jpg" href="./assets/img/favicon.jpg">
     <!-- custom CSS -->
@@ -318,27 +320,332 @@ We manage your social presence end-to-end—content creation, posting, analytics
 </section>
 <!-- Testimonial-video-section End -->
 
-<script>
-  // ================= Testimonial Slider2 =================
-  if (document.querySelector('.testimonial-slider2')) {
-    const testimonialSlider2 = new Swiper(".testimonial-slider2", {
-      spaceBetween: 30,
-      speed: 2000,
-      loop: true,
-      autoplay: { delay: 2000, disableOnInteraction: false },
-      navigation: { prevEl: ".array-prev", nextEl: ".array-next" },
-      breakpoints: {
-        0: { slidesPerView: 1 },
-        575: { slidesPerView: 1 },
-        767: { slidesPerView: 1 },
-        991: { slidesPerView: 1 },
-        1199: { slidesPerView: 1 },
-      },
-    });
-  }
-</script>
 
 
+<!-- FUNCTIONS SECTION START (SEO version) -->
+<section class="ul-functions mb-5">
+  <div class="ul-section-heading text-center justify-content-center">
+    <div class="left">
+      <span class="ul-section-sub-title">Why Choose TechMayon</span>
+      <h2 class="ul-section-title">SEO Optimization Process</h2>
+    </div>
+  </div>
+
+  <div class="ul-functions-container">
+    <div class="row row-cols-md-3 row-cols-1 ul-bs-row align-items-center">
+
+      <!-- LEFT ACCORDION -->
+      <div class="col order-0">
+        <div class="ul-functions-list mt-0">
+
+          <div class="ul-single-accordion-item ul-functions-accordion-item open"
+               data-img="assets/img/seo-analysis.jpg">
+            <div class="ul-single-accordion-item__header" role="button" tabindex="0" aria-expanded="true">
+              <i class="fa-solid fa-search"></i>
+              <h3 class="ul-single-accordion-item__title">Discovery & Analysis</h3>
+            </div>
+            <div class="ul-single-accordion-item__body">
+              <p>We review your website, competitor landscape, and audience behavior to identify SEO gaps and growth opportunities.</p>
+            </div>
+          </div>
+
+          <div class="ul-single-accordion-item ul-functions-accordion-item"
+               data-img="assets/img/seo-keyword.jpg">
+            <div class="ul-single-accordion-item__header" role="button" tabindex="0" aria-expanded="false">
+              <i class="fa-solid fa-key"></i>
+              <h3 class="ul-single-accordion-item__title">Keyword Planning & Strategy</h3>
+            </div>
+            <div class="ul-single-accordion-item__body">
+              <p>We build a targeted keyword roadmap based on search intent, difficulty, and ranking potential for maximum reach.</p>
+            </div>
+          </div>
+
+          <div class="ul-single-accordion-item ul-functions-accordion-item"
+               data-img="assets/img/seo-technical.jpg">
+            <div class="ul-single-accordion-item__header" role="button" tabindex="0" aria-expanded="false">
+              <i class="fa-solid fa-gears"></i>
+              <h3 class="ul-single-accordion-item__title">On-Page & Technical Implementation</h3>
+            </div>
+            <div class="ul-single-accordion-item__body">
+              <p>We optimize site structure, metadata, URLs, speed, mobile performance, navigation, and technical SEO elements.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MIDDLE IMAGE -->
+      <div class="col order-2 order-md-1">
+        <div class="ul-functions-img text-center">
+          <img id="ul-functions-dynamic-img" src="assets/img/seo-analysis.jpg" alt="SEO Preview"
+               style="max-width:100%; height:auto; border-radius:12px; box-shadow:0 8px 30px rgba(15,23,42,0.08);">
+
+          <div class="ul-functions-img-vectors" aria-hidden="true">
+            <div class="sm-block sm-block-1"></div>
+            <div class="sm-block sm-block-2"></div>
+            <div class="big-block"></div>
+            <img src="assets/img/functions-vector.png" alt="vector" class="vector">
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT ACCORDION -->
+      <div class="col order-1 order-md-2">
+        <div class="ul-functions-list mt-0">
+
+          <div class="ul-single-accordion-item ul-functions-accordion-item"
+               data-img="assets/img/seo-content.jpg">
+            <div class="ul-single-accordion-item__header" role="button" tabindex="0" aria-expanded="false">
+              <i class="fa-solid fa-pen-nib"></i>
+              <h3 class="ul-single-accordion-item__title">Content Development</h3>
+            </div>
+            <div class="ul-single-accordion-item__body">
+              <p>We create or refine SEO-focused content that drives engagement, improves rankings, and aligns with user intent.</p>
+            </div>
+          </div>
+
+          <div class="ul-single-accordion-item ul-functions-accordion-item"
+               data-img="assets/img/seo-linkbuilding.jpg">
+            <div class="ul-single-accordion-item__header" role="button" tabindex="0" aria-expanded="false">
+              <i class="fa-solid fa-link"></i>
+              <h3 class="ul-single-accordion-item__title">Off-Page SEO & Link Building</h3>
+            </div>
+            <div class="ul-single-accordion-item__body">
+              <p>We build authority through guest posts, outreach, citations, directories, and high-quality backlinks.</p>
+            </div>
+          </div>
+
+          <div class="ul-single-accordion-item ul-functions-accordion-item"
+               data-img="assets/img/seo-report.jpg">
+            <div class="ul-single-accordion-item__header" role="button" tabindex="0" aria-expanded="false">
+              <i class="fa-solid fa-chart-line"></i>
+              <h3 class="ul-single-accordion-item__title">Tracking, Reporting & Refinement</h3>
+            </div>
+            <div class="ul-single-accordion-item__body">
+              <p>We monitor traffic, rankings, and backlink quality—refining strategies to maintain long-term SEO growth.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- FUNCTIONS SECTION END -->
+
+
+<!-- APP DEVELOPMENT ROADMAP SECTION START --> 
+<section class="am-horizontal-process my-5">
+    <div class="ul-section-heading text-center justify-content-center">
+        <div class="left">
+            <span class="ul-section-sub-title">Why Choose TechMayon</span>
+            <h2 class="ul-section-title">
+                SEO That Delivers Real Results
+            </h2>
+        </div>
+    </div>
+
+    <div class="am-process-steps">
+
+        <!-- Step 1 -->
+        <div class="am-process-step">
+            <div class="am-step-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Results-Driven Strategy</h3>
+            <p>Focused on measurable improvements in rankings, traffic, and conversions.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="am-process-step">
+            <div class="am-step-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>Complete SEO Expertise</h3>
+            <p>From technical SEO to content creation, on-page, and off-page strategies — we handle everything.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="am-process-step">
+            <div class="am-step-icon"><i class="fa-solid fa-sliders"></i></div>
+            <h3>Customized Approach</h3>
+            <p>Every SEO plan is tailored to your business goals, industry, and competition.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="am-process-step">
+            <div class="am-step-icon"><i class="fa-solid fa-tools"></i></div>
+            <h3>Advanced Tools & Techniques</h3>
+            <p>We use leading SEO platforms for accurate data and informed decision-making.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="am-process-step">
+            <div class="am-step-icon"><i class="fa-solid fa-file-lines"></i></div>
+            <h3>Transparent Reporting</h3>
+            <p>Monthly reports keep you updated with clear metrics and growth insights.</p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="am-process-step">
+            <div class="am-step-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+            <h3>Long-Term Growth Focus</h3>
+            <p>Built on sustainable SEO practices that deliver consistent, lasting results.</p>
+        </div>
+
+    </div>
+</section>
+<!-- APP DEVELOPMENT ROADMAP SECTION END -->
+<section class="who-we-help-modern">
+  <div class="container">
+
+    <div class="ul-section-heading text-center justify-content-center">
+      <div class="left">
+        <span class="ul-section-sub-title">Who We Serve</span>
+        <h2 class="ul-section-title">
+          SEO Solutions Tailored for Every Industry
+        </h2>
+      </div>
+    </div>
+
+    <div class="circle-grid mt-5">
+
+      <div class="circle-item">
+        <div class="circle-icon"><i class="fas fa-rocket"></i></div>
+        <h3>Startups & Tech Companies</h3>
+        <!-- <p>Boost visibility for SaaS products, apps, or tech services.</p> -->
+      </div>
+
+      <div class="circle-item">
+        <div class="circle-icon"><i class="fas fa-building"></i></div>
+        <h3>Corporate & B2B Brands</h3>
+        <!-- <p>Strengthen organic presence for enterprise services & solutions.</p> -->
+      </div>
+
+      <div class="circle-item">
+        <div class="circle-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h3>Local Businesses</h3>
+        <!-- <p>Attract customers in your city through targeted local SEO strategies.</p> -->
+      </div>
+
+      <div class="circle-item">
+        <div class="circle-icon"><i class="fas fa-cart-shopping"></i></div>
+        <h3>E-Commerce Brands</h3>
+        <!-- <p>Increase product visibility and organic conversions.</p> -->
+      </div>
+
+      <div class="circle-item">
+        <div class="circle-icon"><i class="fas fa-users"></i></div>
+        <h3>Service  Agencies</h3>
+        <!-- <p>Rank higher for service-based keywords and generate quality leads.</p> -->
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+  <section class="industries-section ul-section-spacing" aria-labelledby="benefits-title">
+    <div class="content">
+
+      <div class="ul-section-heading text-center justify-content-center">
+        <div class="left">
+          <span class="ul-section-sub-title">Benefits You’ll Gain</span>
+          <h2 class="ul-section-title">Why SEO Works for Your Business</h2>
+        </div>
+      </div>
+
+      <div class="grid" id="benefitsGrid">
+
+        <!-- Benefit 1 -->
+        <div class="item">
+          <div class="check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="color:#43006d">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <div class="text">
+            <span class="title">Higher Search Rankings</span>
+            <span class="desc">Get found on the first page for your primary keywords.</span>
+          </div>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="item">
+          <div class="check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="color:#43006d">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <div class="text">
+            <span class="title">Stronger Website Authority</span>
+            <span class="desc">Off-page SEO boosts credibility through trusted backlinks.</span>
+          </div>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="item">
+          <div class="check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="color:#43006d">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <div class="text">
+            <span class="title">Increased Organic Traffic</span>
+            <span class="desc">Drive consistent, long-term traffic without paid ads.</span>
+          </div>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="item">
+          <div class="check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="color:#43006d">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <div class="text">
+            <span class="title">More Qualified Leads</span>
+            <span class="desc">Reach users who are actively searching for your services.</span>
+          </div>
+        </div>
+
+        <!-- Benefit 5 -->
+        <div class="item">
+          <div class="check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="color:#43006d">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <div class="text">
+            <span class="title">Better Brand Visibility</span>
+            <span class="desc">Appear across search engines, directories, and external platforms.</span>
+          </div>
+        </div>
+
+        <!-- Benefit 6 -->
+        <div class="item">
+          <div class="check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="color:#43006d">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <div class="text">
+            <span class="title">Improved User Experience</span>
+            <span class="desc">Optimized pages load faster and offer a smoother browsing experience.</span>
+          </div>
+        </div>
+
+       
+      </div>
+    </div>
+  </section>
+</div>
 
 
 
@@ -573,6 +880,26 @@ document.addEventListener("keydown", e => {
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstr ap-icons.css" rel="stylesheet">
     <!-- custom JS -->
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  // ================= Testimonial Slider2 =================
+  if (document.querySelector('.testimonial-slider2')) {
+    const testimonialSlider2 = new Swiper(".testimonial-slider2", {
+      spaceBetween: 30,
+      speed: 2000,
+      loop: true,
+      autoplay: { delay: 2000, disableOnInteraction: false },
+      navigation: { prevEl: ".array-prev", nextEl: ".array-next" },
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        575: { slidesPerView: 1 },
+        767: { slidesPerView: 1 },
+        991: { slidesPerView: 1 },
+        1199: { slidesPerView: 1 },
+      },
+    });
+  }
+</script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/tab.js"></script>
     <script src="assets/js/accordion.js"></script>
