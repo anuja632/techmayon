@@ -8470,3 +8470,212 @@ padding: 20px;
   font-size: 15px;
   color: #555;
 }
+
+
+
+
+  .testimonial-container {
+  width: 100%;
+  /* max-width: 56rem; */
+  padding: 2rem;
+}
+.testimonial-grid {
+  display: grid;
+  gap: 5rem;
+}
+ .testimonial-grid .image-container {
+  position: relative;
+  width: 100%;
+  height: 24rem;
+  perspective: 1000px;
+}
+ .testimonial-grid  .testimonial-image {
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+ .testimonial-grid .testimonial-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.25rem;
+}
+.designation {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+.quote {
+  font-size: 1.125rem;
+  color: black;
+  text-align: justify;
+  line-height: 1.75;
+}
+.arrow-buttons {
+  display: flex;
+  gap: 1rem;
+  padding-top: 3rem;
+}
+.arrow-button {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background-color: #141414;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.arrow-button:hover {
+  background-color: #00a6fb;
+}
+.arrow-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: #f1f1f7;
+  transition: transform 0.3s;
+}
+.arrow-button:hover svg {
+  fill: #ffffff;
+}
+.prev-button:hover svg {
+  transform: rotate(-12deg);
+}
+.next-button:hover svg {
+  transform: rotate(12deg);
+}
+@media (min-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .arrow-buttons {
+    padding-top: 0;
+  }
+}
+
+
+    
+.why {
+  background-image: url("https://img.freepik.com/premium-photo/search-engine-optimizing-your-website-rank-search-engines-seo-best-promoting-ranking_1126722-14466.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+  color: #fff; /* Make text white for contrast on black */
+}
+
+.why::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color:rgba(49, 47, 47, 0.6); /* ← Dark overlay (adjust opacity if needed) */
+  z-index: -1;
+}
+
+.icon-box {
+  transition: transform 0.3s ease;
+  text-align: left;
+  /* display: flex;               Align icon and content side by side */
+  /* gap: 1rem; */
+  align-items: flex-start;     /* Align text top with icon */
+  background: #fff;
+  color:#000;            /* Optional: background for contrast */
+  box-shadow: 0 0 10px rgba(225,225,225,0.05); /* Optional subtle shadow */
+}
+
+.icon-box:hover {
+  transform: scale(0.97); /* Slight scale */
+}
+
+.icon-box p {
+  text-align: justify;
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.icon-circle {
+  background-color: #ff4d02;
+  width: 45px;
+  height: 45px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+
+.tm-steps-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.tm-step-box {
+  position: relative;
+  width: 23%;
+  height: 350px;
+  border-radius: 18px;
+  overflow: hidden;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.tm-step-box:hover {
+  transform: translateY(-8px);
+}
+
+.tm-step-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(45%);
+  transition: 0.3s ease;
+}
+
+.tm-step-box:hover .tm-step-bg {
+  filter: brightness(30%);
+}
+
+.tm-step-content {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.tm-step-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.tm-step-title {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.tm-step-text {
+  font-size: 15px;
+  line-height: 1.6;
+}
