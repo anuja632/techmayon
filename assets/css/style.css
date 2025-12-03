@@ -5273,6 +5273,7 @@ button {
   color: var(--ul-c4);
   margin-bottom: clamp(7px, 0.74vw, 14px);
 }
+
 .ul-service-details-sidebar-links a::before {
   content: "";
   position: absolute;
@@ -7650,6 +7651,7 @@ flex-direction: column;  }
 }
 
 .service-item::after {
+  color:white;
   background: rgba(67,0,109,0.04);
   transform: rotate(-45deg) translate(100%, 100%);
 }
@@ -7711,6 +7713,7 @@ flex-direction: column;  }
   .service-item{ padding:16px; }
   .service-icon{ width:52px; height:52px; font-size:18px; border-radius:10px;}
 }
+
 
 .ul-about-3-bg {
     width: 100%;
@@ -8678,4 +8681,109 @@ padding: 20px;
 .tm-step-text {
   font-size: 15px;
   line-height: 1.6;
+}
+
+
+
+.lg-exhibit {
+  position: relative;
+  margin: 0;
+  padding: 80px 20px;
+  font-family: 'Georgia', serif;
+  background: url('https://img.freepik.com/premium-vector/pattern-different-types-breads-word-bread_701103-113.jpg?semt=ais_hybrid&w=740&q=80') no-repeat center/cover;
+  color: #111;
+  overflow: hidden;
+}
+
+.lg-exhibit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.lg-exhibit-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.lg-card {
+  background: #fff;
+  border-radius: 25px;
+  padding: 30px 20px 40px;
+  text-align: center;
+  transition: 0.4s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.lg-img-box {
+  height: 220px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.lg-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+  border-radius: 15px;
+}
+
+.lg-card-content {
+  transition: max-height 0.5s ease;
+  max-height: 90px;
+  overflow: hidden;
+}
+
+.lg-card h3 {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  background: #fff;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border-bottom: 2px solid #b30a0a;
+}
+
+.lg-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  margin-top: 12px;
+}
+
+.lg-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.lg-card:hover img {
+  transform: scale(1.03);
+}
+
+.lg-card:hover .lg-card-content {
+  max-height: 300px;
+}
+
+.lg-card:hover p {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .lg-exhibit-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .lg-exhibit-container {
+    grid-template-columns: 1fr;
+  }
 }
